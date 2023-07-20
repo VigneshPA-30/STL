@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-    Program-->Write a C++ program to implement a custom container that behaves like a stack 
+    Write a C++ program to implement a custom container that behaves like a stack 
     using the STL algorithms and data structures.
     
     custom class Stack is created with vector as the base.
@@ -27,19 +27,25 @@ template <typename T> class Stack{
         }
         
         T Pop(){
-            T frstVal=vec.front();
-            vec.erase(vec.begin());
+            T frstVal=vec.back();
+            vec.erase(vec.end());
             return frstVal;
         }
-
+     
+       
+        
         T Top(){
-            return vec.front();
+            return vec.back();
         }
-
+        
+    
+        
         uint32_t Size(){
             return vec.size();
         }
-
+        
+    
+        
         bool isEmpty(){
             return vec.empty();
         }
@@ -59,7 +65,8 @@ int main()
    st.Push("Dhoni");
    st.Push("Rajni");
    
-    cout<<st.Pop()<<endl;     
+   
+    cout<<st.Pop()<<endl;   
     cout<<st.Size()<<endl;
     cout<<st.isEmpty()<<endl;
     cout<<st.Top()<<endl;
@@ -67,3 +74,5 @@ int main()
 
     return 0;
 }
+
+
